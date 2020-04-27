@@ -1,0 +1,115 @@
+@import '../../node_modules/flatpickr/dist/themes/airbnb.css'
+
+$primary: #1C2267
+$green: #B1DE89
+$red: #F56262
+$white: #fff
+$light: #EDEDED
+$dark: #5C5C60
+$black: #000
+
+$normal: 400
+$bold: 600
+
+.calendar
+    position: relative
+    display: block
+    
+    &__wrapper
+        position: relative
+        &--header
+            margin-bottom: 2rem
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .headerButtons
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                span
+                    display: block
+                    margin: 4px 4px
+                    padding: .4rem
+                    svg
+                        display: block
+                        height: 16px
+                        width: auto
+        &--body
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-column-gap: 1.6rem
+            grid-row-gap: 1.6rem
+            @media(max-width: 1023px)
+                grid-template-columns: repeat(2, 1fr) !important
+            
+            @media(max-width: 767px)
+                grid-template-columns: repeat(1, 1fr) !important
+    
+    &__container
+        border: 1px solid $light
+        border-radius: 4px
+        
+        &--header
+            padding: .4rem
+            border-bottom: 1px solid $light
+        &--body
+            display: grid
+            grid-template-columns: repeat(7, 1fr)
+            grid-column-gap: 2px
+            grid-row-gap: 2px
+    
+    &__day
+        height: 60px
+        background: rgba($light, .4)
+        font-size: 1rem
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        
+        span
+            margin: 4px auto auto 4px
+            width: 24px
+            height: 24px
+            border-radius: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+        
+        &--reservations
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+        
+        
+        &--reservation
+            height: 16px
+            width: 100%
+            background: indianred
+            position: relative
+            
+            &.anreise
+                width: 20%
+                margin: auto 0 0 auto
+                &::after
+                    content: ''
+                    position: absolute
+                    top: 0
+                    left: -16px
+                    width: 0
+                    height: 0
+                    border-style: solid
+                    border-width: 0 0 16px 16px
+                    border-color: transparent transparent indianred transparent
+            
+            &.abreise
+                width: 20%
+                &::after
+                    content: ''
+                    position: absolute
+                    top: 0
+                    right: -16px
+                    width: 0
+                    height: 0
+                    border-style: solid
+                    border-width: 16px 16px 0 0
+                    border-color: indianred transparent transparent transparent
