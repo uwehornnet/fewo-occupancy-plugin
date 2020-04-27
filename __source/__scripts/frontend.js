@@ -133,7 +133,7 @@ const CalendarWrapper = ({count}) => {
         fetchReservations()
         const counter = [];
         let i = 0;
-        while(i < 3){
+        while(i < count){
             counter.push(true);
             i++
         }
@@ -158,9 +158,7 @@ const CalendarWrapper = ({count}) => {
                     </span>
                 </div>
             </div>
-            <div className="calendar__wrapper--body" style={{
-                gridTemplateColumns: `repeat(${calendarCount.length}, 1fr)`
-            }}>
+            <div className="calendar__wrapper--body">
                 { calendarCount && calendarCount.map((cal, index) => (
                     <Calendar key={index} month={month + index} reservations={mappedReservations}/>
                 ))}

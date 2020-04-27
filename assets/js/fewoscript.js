@@ -322,7 +322,7 @@ var CalendarWrapper = function CalendarWrapper(_ref3) {
     var counter = [];
     var i = 0;
 
-    while (i < 3) {
+    while (i < count) {
       counter.push(true);
       i++;
     }
@@ -355,10 +355,7 @@ var CalendarWrapper = function CalendarWrapper(_ref3) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     d: "m382.678 226.804-218.948-218.944c-5.064-5.068-11.824-7.86-19.032-7.86s-13.968 2.792-19.032 7.86l-16.124 16.12c-10.492 10.504-10.492 27.576 0 38.064l183.856 183.856-184.06 184.06c-5.064 5.068-7.86 11.824-7.86 19.028 0 7.212 2.796 13.968 7.86 19.04l16.124 16.116c5.068 5.068 11.824 7.86 19.032 7.86s13.968-2.792 19.032-7.86l219.152-219.144c5.076-5.084 7.864-11.872 7.848-19.088.016-7.244-2.772-14.028-7.848-19.108z"
   }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "calendar__wrapper--body",
-    style: {
-      gridTemplateColumns: "repeat(".concat(calendarCount.length, ", 1fr)")
-    }
+    className: "calendar__wrapper--body"
   }, calendarCount && calendarCount.map(function (cal, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Calendar, {
       key: index,
